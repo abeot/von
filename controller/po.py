@@ -286,4 +286,4 @@ def main(self: object, argv: list[str]):
         with open(filepath, "w") as f:
             print(s, file=f)
         os.chdir(VON_POST_OUTPUT_DIR)
-        os.system("latexmk -pv %s" % filepath)
+        os.system("latexmk -pv -view=pdf %s" % filepath)

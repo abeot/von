@@ -55,7 +55,11 @@ class VonTerminal(cmd.Cmd, controller.VonController):
 
     def run(self):
         print(WELCOME_STRING)
-        os.chdir(model.getCompleteCwd())
+        try:
+            os.chdir(model.getCompleteCwd())
+        except FileNotFoundError:
+            os.mkdir(model.getCompleteCwd())
+            os.chdir(model.getCompleteCwd())
         while 1:
             try:
                 self.cmdloop()
