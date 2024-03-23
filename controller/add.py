@@ -100,6 +100,7 @@ YAML_DATA_FILE = """# Input your problem metadata here
 source: {source}     # e.g. USAMO 2000/6. This must be unique
 desc:   <++>     # e.g. Fiendish inequality
 path:   {path}<++>
+hardness: <++>
 tags:   [{now.year}-{now.month:02d}, <++>]
 url: {url}
 
