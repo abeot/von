@@ -10,7 +10,10 @@ else:
 def get_clipboard() -> str:
     if PYPERCLIP_AVAILABLE:
         assert pyperclip is not None
-        return pyperclip.paste().strip()
+        try:
+            return pyperclip.paste().strip()
+        except:
+            return ""
     else:
         return ""
 
