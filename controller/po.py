@@ -220,7 +220,7 @@ path Drawing(path g, pen p = defaultpen, arrowbar ar = None) {
 \addtokomafont{paragraph}{\color{orange!35!black}\P\ }"""
 
 # Next line is my code
-LATEX_PREAMBLE = "\usepackage{amsmath,amssymb,amsthm,asymptote,evan}\n"
+LATEX_PREAMBLE = "\\usepackage{amsmath,amssymb,amsthm,asymptote,evan}\n"
 
 def main(self: object, argv: list[str]):
     opts = parser.process(argv)
@@ -242,7 +242,7 @@ def main(self: object, argv: list[str]):
         title = "Solutions"
 
     s = r"\documentclass[11pt]{scrartcl}" + "\n"
-    s += LATEX_PREAMBLE.replace("AUTHOR", opts.author).replace("TITLE", title)
+    s += LATEX_PREAMBLE.replace("AUTHOR", opts.author).replace("TITLE", title) + "\n"
     s += r"\begin{document}" + "\n"
     s += r"\title{" + title + "}" + "\n"
     if opts.subtitle is not None:
