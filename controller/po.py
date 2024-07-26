@@ -219,6 +219,8 @@ path Drawing(path g, pen p = defaultpen, arrowbar ar = None) {
 
 \addtokomafont{paragraph}{\color{orange!35!black}\P\ }"""
 
+# Next line is my code
+LATEX_PREAMBLE = "\usepackage{amsmath,amssymb,amsthm,asymptote,evan}\n"
 
 def main(self: object, argv: list[str]):
     opts = parser.process(argv)
